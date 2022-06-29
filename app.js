@@ -54,7 +54,7 @@ app.get("/saad", (req, res)=>{
 
 
 // if(process.env.NODE_ENV=='production'){
-  const path = require('path')
+import * as path from 'path'
 
   app.get('/',(req,res)=>{
       app.use(express.static(path.resolve(__dirname,'client','build')))
