@@ -55,17 +55,20 @@ app.get("/saad", (req, res)=>{
 
 import path from "path";
 
-//   app.get('/',(req,res)=>{
-//       app.use(express.static(path.resolve(__dirname,'client','build')))
-//       res.sendFile(path.resolve(__dirname,'client','build','index.html'))
-//   })
-// }
 
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve("client", "build", "index.html"));
+
+app.use(express.static(path.join(__dirname, "client/build")));
+
+app.get("*", function (_, res) {
+  res.sendFile(
+    path.join(__dirname, "client/build/index.html"),
+    function (err) {
+      if (err) {
+        res.status(500).send(err);
+      }
+    }
+  );
 });
-
-
 
 
 
