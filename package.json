@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
 
-  "pkg": {
-    "options": ["experimental-modules"]
-},
+
     "type": "module",
 
   
