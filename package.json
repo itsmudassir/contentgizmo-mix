@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "commonjs",
 
   "pkg": {
     "options": ["experimental-modules"]
 },
+    "type": "module",
+
   
   
   "scripts": {
