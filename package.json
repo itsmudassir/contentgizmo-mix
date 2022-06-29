@@ -4,6 +4,12 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  
+  "pkg": {
+    "options": ["experimental-modules"]
+},
+  
+  
   "scripts": {
     "start": "node app.js",
     "server": "nodemon app.js"
